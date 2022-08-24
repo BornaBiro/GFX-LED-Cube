@@ -46,6 +46,7 @@ void LEDCube::display(void)
 
 void LEDCube::drawPixel(int16_t x, int16_t y, uint16_t color)
 {
+	if ((x < 0) || (x > 7) || (y < 0) || (y > 7)) return;
 	int16_t _x0 = (_depth % 2 == 0 ? (3 - x) : x);
 	pixels[y]->setPixelColor((_depth * 4) + _x0, color);	
 }
