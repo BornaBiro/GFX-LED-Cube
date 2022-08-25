@@ -3,11 +3,15 @@ LEDCube myCube;
 
 void setup() {
   // put your setup code here, to run once:
+  Serial.begin(115200);
+  Serial.println("Code has started");
+  Serial.flush();
+
   myCube.begin();
-  myCube.drawPixel(0, 0, 65535);
-  myCube.drawPixel(0, 1, 58);
-  myCube.setDepth(2);
-  myCube.drawPixel(0, 2, 65535);
+  myCube.setCursor(0, 0);
+  myCube.setTextColor(4096);
+  myCube.setTextSize(1);
+  myCube.print('1');
   myCube.display();
 }
 

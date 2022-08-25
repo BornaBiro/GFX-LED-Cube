@@ -61,17 +61,17 @@ void LEDCube::drawPixel(int16_t x, int16_t y, uint16_t color)
 	pixels[y]->setPixelColor((_depth * 8) + _x0, color);
 	
 	// Debug stuff, ignore it for now.
-	//Serial.print("X:");
-	//Serial.print(x, DEC);
-	//Serial.print(" Y:");
-	//Serial.print(y, DEC);
-	//Serial.print(" Z:");
-	//Serial.print(_depth, DEC);
-	//Serial.print(" Color:");
-	//Serial.print(color, DEC);
-	//Serial.print(" LED:");
-	//Serial.print((_depth * 4) + _x0, DEC);
-	//Serial.println();
+	Serial.print("X:");
+	Serial.print(x, DEC);
+	Serial.print(" Y:");
+	Serial.print(y, DEC);
+	Serial.print(" Z:");
+	Serial.print(_depth, DEC);
+	Serial.print(" Color:");
+	Serial.print(color, DEC);
+	Serial.print(" LED:");
+	Serial.print((_depth * 4) + _x0, DEC);
+	Serial.println();
 }
 
 void LEDCube::setDepth(int _d)
